@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce51cf76-d835-4ff1-9c03-efc825de03a2" name="Default Changelist" comment="" />
+    <list default="true" id="ce51cf76-d835-4ff1-9c03-efc825de03a2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tugas/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Tugas/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tugas/src/component/addArticle.js" beforeDir="false" afterPath="$PROJECT_DIR$/Tugas/src/component/addArticle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tugas/src/component/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/Tugas/src/component/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tugas/src/data/source.js" beforeDir="false" afterPath="$PROJECT_DIR$/Tugas/src/data/source.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +50,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Tugas" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -56,8 +65,24 @@
       <workItem from="1610782670801" duration="7922000" />
       <workItem from="1610792790202" duration="199000" />
       <workItem from="1610793069096" duration="67000" />
-      <workItem from="1610807946977" duration="1929000" />
+      <workItem from="1610807946977" duration="2657000" />
+      <workItem from="1610850210300" duration="4131000" />
     </task>
+    <task id="LOCAL-00001" summary="Pura-pura kerja">
+      <created>1610811949369</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610811949369</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Jangan dibaca">
+      <created>1610812064154</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610812064154</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -73,5 +98,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Pura-pura kerja" />
+    <MESSAGE value="Jangan dibaca" />
+    <option name="LAST_COMMIT_MESSAGE" value="Jangan dibaca" />
   </component>
 </project>

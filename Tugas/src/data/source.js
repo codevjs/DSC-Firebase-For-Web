@@ -1,5 +1,6 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
+import "firebase/database";
 
 class Source {
 
@@ -9,6 +10,7 @@ class Source {
 
     ref() {
         // return firebase.firestore().collection(this._collection);
+        return firebase.firestore().collection(this._collection);
     }
 
     /**
@@ -25,6 +27,16 @@ class Source {
         //     });
         //     return renderer.articles = data;
         // });
+        query.get()
+            .then(querySnapshot => {
+                let data = [];
+                querySnapshot.forEach(function(doc) {
+                    // doc.data() is never undefined for query doc snapshots
+                    data.push({...doc.data(), id: doc.id})
+                });
+
+                renderer.articles = data;
+            })
     }
 
     /**
@@ -34,6 +46,8 @@ class Source {
         // TODO membuat query untuk mengambil semua data artikel
         // let query = this.ref()
         // this.getDocumentsInQuery(query, renderer);
+        let query = this.ref()
+        this.getDocumentsInQuery(query, renderer);
     }
 
     /**
@@ -44,6 +58,7 @@ class Source {
     getArticle(id) {
         // TODO membuat query untuk mengambil data artikel berdasarkan id
         // return this.ref().doc(id).get()
+        return this.ref().doc(id).get();
     }
 
     /**
@@ -53,16 +68,16 @@ class Source {
      */
     getFilteredArticle(filter, renderer) {
         // TODO membuat query untuk menyaring data artikel berdasarkan kategori
-        // let query;
-        // if (filter !== 'Semua'){
-        //     query = this.ref()
-        //         .where('category', '==', filter)
-        //         .orderBy('title', "asc");
-        // }else {
-        //     query = this.ref();
-        // }
-        //
-        // this.getDocumentsInQuery(query, renderer);
+        let query;
+        if (filter !== 'Semua'){
+            query = this.ref()
+                .where('category', '==', filter)
+                .orderBy('timestamp', "desc");
+        }else {
+
+            query = this.ref();
+        }
+        this.getDocumentsInQuery(query, renderer);
     }
 
     /**
@@ -78,6 +93,16 @@ class Source {
         //     .catch(error => {
         //         return Promise.reject(error.message)
         //     })
+
+        firebase.database().ref(this._collection).push(data);
+
+        return this.ref().add(data)
+            .then(() => {
+                return Promise.resolve("Artikel berhasil ditambahkan.");
+            })
+            .catch(error => {
+                return Promise.reject(error.message);
+            })
     }
 
     /**

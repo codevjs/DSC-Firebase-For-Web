@@ -20,12 +20,13 @@ import login from "./view/login";
 // Your web app's Firebase configuration
 // TODO Masukkan configurasi firebase
 const config = {
-    apiKey: "",
-    authDomain: "",
-    projectId: "",
-    storageBucket: "",
-    messagingSenderId: "",
-    appId: ""
+    apiKey: "AIzaSyDliysy6ibZjg4JGCCHFis0jeYfI5lbkrU",
+    authDomain: "testing-dsc-e76b1.firebaseapp.com",
+    databaseURL: "https://testing-dsc-e76b1-default-rtdb.firebaseio.com",
+    projectId: "testing-dsc-e76b1",
+    storageBucket: "testing-dsc-e76b1.appspot.com",
+    messagingSenderId: "771203247658",
+    appId: "1:771203247658:web:6a7bcc4b9a4c1c6f541d53"
 };
 
 // Initialize Firebase

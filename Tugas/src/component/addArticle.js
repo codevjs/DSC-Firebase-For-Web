@@ -18,8 +18,12 @@ class addArticle extends HTMLElement {
         this.onSubmit();
 
         // TODO cek cookie apabila cookie tidak ada maka akan ke redirect ke halaman masuk
+        let session = Cookies.get("session");
 
-
+        if (session === undefined) {
+            alert("Masuk terlebih dahulu");
+            window.location.href = "/masuk"
+        }
     }
 
     onSubmit() {
@@ -40,11 +44,63 @@ class addArticle extends HTMLElement {
 
                const file = image.files[0];
 
+               function guidGenerator() {
+                   let S4 = function() {
+                       return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
+                   };
+                   return (S4()+S4()+"-"+S4()+"-"+S4()+"-"+S4()+"-"+S4()+S4()+S4());
+               }
+
                // TODO mengupload gambar ke firebase storage
+               let downloadURL = await new Promise((resolve, reject) => {
+
+                   let storageRef = firebase.storage().ref();
+
+                   let imageRef   = storageRef.child(guidGenerator());
+
+                   let uploadTask = imageRef.put(file);
+
+                   // Register three observers:
+                   // 1. 'state_changed' observer, called any time the state changes
+                   // 2. Error observer, called on failure
+                   // 3. Completion observer, called on successful completion
+                   uploadTask.on('state_changed', function(snapshot){
+                       // Observe state change events such as progress, pause, and resume
+                       // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+                       // var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                       // console.log('Upload is ' + progress + '% done');
+                       // switch (snapshot.state) {
+                       //     case firebase.storage.TaskState.PAUSED: // or 'paused'
+                       //         console.log('Upload is paused');
+                       //         break;
+                       //     case firebase.storage.TaskState.RUNNING: // or 'running'
+                       //         console.log('Upload is running');
+                       //         break;
+                       // }
+                   }, function(error) {
+                       // Handle unsuccessful uploads
+                        return reject(error.message);
+                   }, function() {
+                       // Handle successful uploads on complete
+                       // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+                       uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+
+                           return resolve(downloadURL);
+                       });
+                   });
+               })
 
                // TODO menyimpan artikel ke database
+               let message = await new Source().setArticle({
+                   image : downloadURL,
+                   title : title.value,
+                   description : description.value,
+                   category : category.value,
+                   timestamp : new Date()
+               })
 
                // TODO menampilkan pesan
+               window.alert(message);
 
                this.render();
 
