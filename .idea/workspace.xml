@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce51cf76-d835-4ff1-9c03-efc825de03a2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tugas/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Tugas/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tugas/src/component/addArticle.js" beforeDir="false" afterPath="$PROJECT_DIR$/Tugas/src/component/addArticle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tugas/src/component/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/Tugas/src/component/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tugas/src/data/source.js" beforeDir="false" afterPath="$PROJECT_DIR$/Tugas/src/data/source.js" afterDir="false" />
-    </list>
+    <list default="true" id="ce51cf76-d835-4ff1-9c03-efc825de03a2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,6 +61,7 @@
       <workItem from="1610793069096" duration="67000" />
       <workItem from="1610807946977" duration="2657000" />
       <workItem from="1610850210300" duration="4131000" />
+      <workItem from="1611058647756" duration="48000" />
     </task>
     <task id="LOCAL-00001" summary="Pura-pura kerja">
       <created>1610811949369</created>
@@ -82,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610812064154</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Finish">
+      <created>1611058665845</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1611058665845</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,6 +105,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Pura-pura kerja" />
     <MESSAGE value="Jangan dibaca" />
-    <option name="LAST_COMMIT_MESSAGE" value="Jangan dibaca" />
+    <MESSAGE value="Finish" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish" />
   </component>
 </project>
